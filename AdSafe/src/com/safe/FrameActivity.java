@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import com.safe.core.BaseActionBarActivity;
 import com.safe.fragment.FragmentHome;
-import com.safe.utils.Containts;
+import com.safe.utils.FragmentTags;
 
 public class FrameActivity extends BaseActionBarActivity {
 
@@ -12,7 +12,7 @@ public class FrameActivity extends BaseActionBarActivity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.frame_activity);
-		setContentFragment(FragmentHome.class, Containts.FRAGMENT_HOME, null);
+		setContentFragment(FragmentHome.class, FragmentTags.FRAGMENT_HOME, null);
 		findViews();
 		initViews(savedInstanceState);
 		initData(savedInstanceState);

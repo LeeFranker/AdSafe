@@ -2,5 +2,13 @@
 <resources>
 
     <string name="app_name">AdSafe</string>
+    <string name="adsafe_open_ok">SD Block开启成功</string>
+    <string name="adsafe_info_ad">开视频就是没广告</string>
+    <string name="adsafe_info_version">Ad Block安卓版本：1.2.0.114</string>
+    <string name="action_item_update">版本更新</string>
+    <string name="action_item_list">过滤列表</string>
+    <string name="action_item_feedback">意见反馈</string>
+    <string name="action_item_about">关于</string>
+    <string name="action_item_quit">退出</string>
 
 </resources>

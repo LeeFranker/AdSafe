@@ -1,6 +1,6 @@
 package com.safe.utils;
 
-public class Containts {
+public class FragmentTags {
 	public static final String FRAGMENT_HOME="fragment_home";
 	public static final String FRAGMENT_LIST="fragment_list";
 	public static final String FRAGMENT_UPDATE="fragment_update";

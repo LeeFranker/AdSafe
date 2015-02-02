@@ -3,22 +3,29 @@
 
     <item
         android:id="@+id/menu_action_update"
-        android:orderInCategory="1"
-        android:title="hahah"
         android:icon="@drawable/icon"
-        android:showAsAction="always"
-        android:actionLayout="@layout/menu_view"/>
+        android:orderInCategory="1"
+        android:title="@string/action_item_update"/>
     <item
         android:id="@+id/menu_action_list"
-        android:orderInCategory="2"/>
+        android:icon="@drawable/icon"
+        android:orderInCategory="2"
+        android:title="@string/action_item_list"/>
     <item
         android:id="@+id/menu_action_feedback"
-        android:orderInCategory="3"/>
+        android:icon="@drawable/icon"
+        android:orderInCategory="3"
+        android:title="@string/action_item_feedback"/>
+
     <item
         android:id="@+id/menu_action_about"
-        android:orderInCategory="4"/>
+        android:icon="@drawable/icon"
+        android:orderInCategory="4"
+        android:title="@string/action_item_about"/>
     <item
         android:id="@+id/menu_action_quit"
-        android:orderInCategory="5"/>
+        android:icon="@drawable/icon"
+        android:orderInCategory="5"
+        android:title="@string/action_item_quit"/>
 
 </menu>

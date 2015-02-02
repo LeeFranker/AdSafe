@@ -2,6 +2,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#00ff00" >
+    android:background="@color/white" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
+        android:text="@string/adsafe_open_ok"
+        android:textColor="@color/green"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/adsafe_version"
+        android:layout_centerHorizontal="true"
+        android:text="@string/adsafe_info_ad"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/adsafe_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15sp"
+        android:text="@string/adsafe_info_version"
+        android:textSize="12sp" />
 
 </RelativeLayout>

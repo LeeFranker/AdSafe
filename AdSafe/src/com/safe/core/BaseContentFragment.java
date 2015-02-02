@@ -6,30 +6,23 @@ import android.view.View;
 
 public abstract class BaseContentFragment extends BaseFragment {
 
-	public final void setContentFragment(
-			Class<? extends BaseContentFragment> fragmentClass, String tag,
-			Bundle args) {
+	public final void setContentFragment(Class<? extends BaseContentFragment> fragmentClass, String tag, Bundle args) {
 		if (getActivity() == null) {
 			throw new IllegalStateException("error");
 		} else {
-			BaseActionBarActivity activity = (BaseActionBarActivity) this
-					.getActivity();
+			BaseActionBarActivity activity = (BaseActionBarActivity) this.getActivity();
 			activity.setContentFragment(fragmentClass, tag, args);
 		}
 	}
+	
 
 	public final void setActionBarIndicator() {
 		if (getActivity() == null) {
 			throw new IllegalStateException("error");
 		} else {
-			BaseActionBarActivity activity = (BaseActionBarActivity) this
-					.getActivity();
-			activity.setActionbarIndicator(true);
+			BaseActionBarActivity activity = (BaseActionBarActivity) this.getActivity();
+			activity.setActionbarIndicator();
 		}
-	}
-
-	public final void setSlidingEnabled(boolean b) {
-
 	}
 
 	@Override
@@ -39,7 +32,6 @@ public abstract class BaseContentFragment extends BaseFragment {
 		Activity activity = getActivity();
 		if (activity instanceof BaseActionBarActivity) {
 			setActionBarIndicator();
-			setSlidingEnabled(isCleanStack());
 		}
 	}
 }

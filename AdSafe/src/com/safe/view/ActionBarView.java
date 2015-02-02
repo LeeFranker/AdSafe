@@ -15,6 +15,9 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 
 import com.safe.R;
+import com.safe.core.BaseActionBarActivity;
+import com.safe.fragment.FragmentList;
+import com.safe.utils.FragmentTags;
 
 public class ActionBarView implements OnClickListener, OnMenuItemClickListener {
 
@@ -29,8 +32,7 @@ public class ActionBarView implements OnClickListener, OnMenuItemClickListener {
 
 	private void initialize() {
 		mActionView = View.inflate(context, R.layout.actionbar_view, null);
-		ImageView mMoreView = (ImageView) mActionView
-				.findViewById(R.id.more_imageview);
+		ImageView mMoreView = (ImageView) mActionView.findViewById(R.id.more_imageview);
 		mMoreView.setOnClickListener(this);
 		mPopupMenu = new PopupMenu(context, mMoreView);
 		showActionViewIcon(mPopupMenu);
@@ -40,8 +42,7 @@ public class ActionBarView implements OnClickListener, OnMenuItemClickListener {
 
 	public void addActionView(ActionBar actionBar) {
 		if (mActionView != null) {
-			LayoutParams lp = new LayoutParams(LayoutParams.WRAP_CONTENT,
-					LayoutParams.MATCH_PARENT);
+			LayoutParams lp = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT);
 			lp.gravity = Gravity.RIGHT | Gravity.CENTER_VERTICAL;
 			actionBar.setDisplayShowCustomEnabled(true);
 			actionBar.setCustomView(mActionView, lp);
@@ -62,6 +63,17 @@ public class ActionBarView implements OnClickListener, OnMenuItemClickListener {
 		switch (item.getItemId()) {
 		case R.id.menu_action_update:
 			break;
+		case R.id.menu_action_list:
+			BaseActionBarActivity list = (BaseActionBarActivity) context;
+			list.setContentFragment(FragmentList.class, FragmentTags.FRAGMENT_LIST, null);
+			break;
+		case R.id.menu_action_feedback:
+			break;
+		case R.id.menu_action_about:
+			break;
+		case R.id.menu_action_quit:
+			System.exit(0);
+			break;
 		}
 		return true;
 	}
@@ -73,10 +85,8 @@ public class ActionBarView implements OnClickListener, OnMenuItemClickListener {
 				if ("mPopup".equals(field.getName())) {
 					field.setAccessible(true);
 					Object menuPopupHelper = field.get(popupMenu);
-					Class<?> classPopupHelper = Class.forName(menuPopupHelper
-							.getClass().getName());
-					Method setForceIcons = classPopupHelper.getMethod(
-							"setForceShowIcon", boolean.class);
+					Class<?> classPopupHelper = Class.forName(menuPopupHelper.getClass().getName());
+					Method setForceIcons = classPopupHelper.getMethod("setForceShowIcon", boolean.class);
 					setForceIcons.invoke(menuPopupHelper, true);
 					break;
 				}
