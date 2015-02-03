@@ -1,4 +1,5 @@
 <resources>
 
+    <dimen name="divide_height">0.5dp</dimen>
 
 </resources>

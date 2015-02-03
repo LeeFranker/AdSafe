@@ -16,7 +16,6 @@
         android:icon="@drawable/icon"
         android:orderInCategory="3"
         android:title="@string/action_item_feedback"/>
-
     <item
         android:id="@+id/menu_action_about"
         android:icon="@drawable/icon"

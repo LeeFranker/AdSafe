@@ -6,7 +6,7 @@
         android:id="@+id/more_imageview"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@drawable/update_normal"
+        android:background="@color/green"
         android:clickable="true"
         android:scaleType="fitXY"
         android:contentDescription="@string/app_name" />
